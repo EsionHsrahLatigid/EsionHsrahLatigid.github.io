@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import struct
 import sys
 import xml.etree.ElementTree as ET
@@ -13,6 +14,18 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
+FORBIDDEN_PUBLIC_COPY = re.compile(r"digital\s+harsh\s+noise", re.IGNORECASE)
+PUBLIC_TEXT_SUFFIXES = {
+    ".css",
+    ".html",
+    ".js",
+    ".json",
+    ".md",
+    ".svg",
+    ".txt",
+    ".webmanifest",
+    ".xml",
+}
 
 
 class SiteParser(HTMLParser):
@@ -80,6 +93,16 @@ def main() -> None:
 
     ET.parse(SITE / "sitemap.xml")
 
+    public_text_files = [ROOT / "README.md"]
+    public_text_files.extend(
+        path
+        for path in SITE.rglob("*")
+        if path.is_file() and path.suffix.lower() in PUBLIC_TEXT_SUFFIXES
+    )
+    for path in public_text_files:
+        if FORBIDDEN_PUBLIC_COPY.search(path.read_text(encoding="utf-8")):
+            fail(f"forbidden public-facing brand phrase in {path.relative_to(ROOT)}")
+
     preview = (SITE / "assets/social/ehl-social-preview.png").read_bytes()
     if preview[:8] != b"\x89PNG\r\n\x1a\n":
         fail("social preview is not a PNG")
@@ -87,7 +110,7 @@ def main() -> None:
     if (width, height) != (1200, 630):
         fail(f"social preview must be 1200x630, got {width}x{height}")
 
-    print("PASS: HTML references, metadata, manifest, sitemap, SVGs, and 1200x630 social preview")
+    print("PASS: public copy, HTML references, metadata, manifest, sitemap, SVGs, and 1200x630 social preview")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">EsionHsrahLatigid</title>
-  <desc id="desc">Digital harsh noise audio processing systems.</desc>
+  <desc id="desc">EsionHsrahLatigid audio processing systems.</desc>
   <rect width="1200" height="630" fill="#050505"/>
   <g stroke="#f2f2f0" stroke-opacity=".22" fill="none">
     <path d="M40 40H1160V590H40Z"/>
@@ -8,7 +8,7 @@
   </g>
   <g fill="#8a8a86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="2">
     <text x="72" y="92">EHL//WEB//00</text>
-    <text x="1128" y="92" text-anchor="end">DIGITAL HARSH NOISE</text>
+    <text x="1128" y="92" text-anchor="end">CONTROLLED SIGNAL DAMAGE</text>
     <text x="72" y="552">AUDIO PROCESSING SYSTEMS</text>
     <text x="1128" y="552" text-anchor="end">ESION HSRAH LATIGID</text>
   </g>
