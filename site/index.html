@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="EsionHsrahLatigid web presence built as a compact monochrome GitHub Pages site."
+    />
+    <title>EsionHsrahLatigid / Web</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="frame">
+      <header class="hero">
+        <p class="eyebrow">ehl-design / github pages / static site</p>
+        <div class="hero-grid">
+          <div>
+            <span class="mark" aria-label="ehl">ehl</span>
+            <h1>EsionHsrahLatigid</h1>
+            <p class="lede">
+              Compact monochrome web surface for the EHL system. Built to stay
+              readable, spare, and slightly hostile without turning into noise
+              wallpaper.
+            </p>
+          </div>
+
+          <aside class="status" aria-label="site status">
+            <div class="status-row">
+              <span class="label">surface</span>
+              <span>static html/css</span>
+            </div>
+            <div class="status-row">
+              <span class="label">deploy</span>
+              <span>github actions</span>
+            </div>
+            <div class="status-row">
+              <span class="label">target</span>
+              <span>github pages</span>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="panel panel-wide">
+          <div class="panel-head">
+            <h2>system notes</h2>
+            <span>monochrome / editorial / compact</span>
+          </div>
+          <div class="metrics">
+            <article>
+              <h3>identity</h3>
+              <p>Black and white only. Typography carries the brand.</p>
+            </article>
+            <article>
+              <h3>layout</h3>
+              <p>Small width, controlled height, no dead space.</p>
+            </article>
+            <article>
+              <h3>damage</h3>
+              <p>Noise lives inside the forms, not around them.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>delivery</h2>
+            <span>project site</span>
+          </div>
+          <ul class="list">
+            <li><strong>repo</strong> separate `web/` workspace</li>
+            <li><strong>entry</strong> `site/index.html`</li>
+            <li><strong>deploy</strong> upload `site/` as the Pages artifact</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>workflow</h2>
+            <span>push to main</span>
+          </div>
+          <pre class="code"><code>actions/checkout
+actions/configure-pages
+actions/upload-pages-artifact
+actions/deploy-pages</code></pre>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Built from the EHL brand rules as a GitHub Pages-ready starter.</p>
+      </footer>
+    </div>
+  </body>
+</html>
