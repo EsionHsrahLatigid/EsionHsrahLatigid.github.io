@@ -100,23 +100,70 @@
             <p class="section-number">02</p>
             <h2 id="plugins-title">Plugin catalog</h2>
           </div>
-          <p class="catalog-note">Selected public instruments and effects. Repository availability is the current release state.</p>
+          <p class="catalog-note">Every active public plugin repository. Infrastructure, archived repositories, and forks are excluded.</p>
         </div>
 
         <div class="filters" role="group" aria-label="Filter plugins by category">
           <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">ALL</button>
-          <button class="filter" type="button" data-filter="distortion" aria-pressed="false">DISTORTION</button>
-          <button class="filter" type="button" data-filter="dynamics" aria-pressed="false">DYNAMICS</button>
-          <button class="filter" type="button" data-filter="modulation" aria-pressed="false">MODULATION</button>
-          <button class="filter" type="button" data-filter="time" aria-pressed="false">TIME/SPACE</button>
-          <button class="filter" type="button" data-filter="generator" aria-pressed="false">GENERATOR</button>
+          <button class="filter" type="button" data-filter="yup" aria-pressed="false">YUP</button>
+          <button class="filter" type="button" data-filter="juce" aria-pressed="false">JUCE</button>
         </div>
 
-        <p class="result-count" aria-live="polite"><span id="visible-count">12</span> signals visible</p>
+        <p class="result-count" aria-live="polite"><span id="visible-count">45</span> plugins visible</p>
 
         <div class="project-list">
-          <article class="project" data-category="distortion">
+          <article class="project" data-category="juce">
             <span class="project-index">001</span>
+            <div class="project-copy">
+              <p class="project-type">Frame fault // JUCE</p>
+              <h3>AdatTypeI</h3>
+              <p>ADAT Type I-inspired frame faults with controlled bit flips, burst inversions, and holds.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/AdatTypeI" aria-label="Open AdatTypeI repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">002</span>
+            <div class="project-copy">
+              <p class="project-type">Codec corruption // JUCE</p>
+              <h3>AtracGlitch</h3>
+              <p>ATRAC1-structured transform-frame corruption with compressed-domain mutations.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/AtracGlitch" aria-label="Open AtracGlitch repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">003</span>
+            <div class="project-copy">
+              <p class="project-type">Breakbeat slicer // JUCE</p>
+              <h3>BBSlash</h3>
+              <p>Deterministic generative breakbeat slicer.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BBSlash" aria-label="Open BBSlash repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">004</span>
+            <div class="project-copy">
+              <p class="project-type">Noise distortion // JUCE</p>
+              <h3>Berzmow</h3>
+              <p>Feedback-driven noise distortion with saturation, filtering, and resonant tone shaping.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/berzmow" aria-label="Open Berzmow repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">005</span>
+            <div class="project-copy">
+              <p class="project-type">Binary fault // JUCE</p>
+              <h3>BinaryGlitch</h3>
+              <p>Binary byte-stream fault textures with frame corruption, bursts, comb structure, and drive.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BinaryGlitch" aria-label="Open BinaryGlitch repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">006</span>
             <div class="project-copy">
               <p class="project-type">Bit reduction // YUP</p>
               <h3>BitMangle</h3>
@@ -125,18 +172,238 @@
             <a href="https://github.com/EsionHsrahLatigid/BitMangle" aria-label="Open BitMangle repository">↗</a>
           </article>
 
-          <article class="project" data-category="dynamics">
-            <span class="project-index">002</span>
+          <article class="project" data-category="juce">
+            <span class="project-index">007</span>
             <div class="project-copy">
-              <p class="project-type">Compression // YUP</p>
-              <h3>PressureHex</h3>
-              <p>Feed-forward compressor with a hard, readable signal path.</p>
+              <p class="project-type">Bit reduction // JUCE</p>
+              <h3>BitRash</h3>
+              <p>Deterministic 1–16 bit crusher with decimation, dither, and bounded error feedback.</p>
             </div>
-            <a href="https://github.com/EsionHsrahLatigid/PressureHex" aria-label="Open PressureHex repository">↗</a>
+            <a href="https://github.com/EsionHsrahLatigid/BitRash" aria-label="Open BitRash repository">↗</a>
           </article>
 
-          <article class="project" data-category="modulation">
-            <span class="project-index">003</span>
+          <article class="project" data-category="yup">
+            <span class="project-index">008</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>BlackThrum</h3>
+              <p>MIDI-triggered three-carrier detuned thrum and drone instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BlackThrum" aria-label="Open BlackThrum repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">009</span>
+            <div class="project-copy">
+              <p class="project-type">Limiting // JUCE</p>
+              <h3>BrickMaw</h3>
+              <p>Fixed-latency lookahead limiter with destructive predrive and a bounded ceiling.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BrickMaw" aria-label="Open BrickMaw repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">010</span>
+            <div class="project-copy">
+              <p class="project-type">Compression // YUP</p>
+              <h3>BrutalPress</h3>
+              <p>Extreme three-band upward and downward compression.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BrutalPress" aria-label="Open BrutalPress repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">011</span>
+            <div class="project-copy">
+              <p class="project-type">Limiting // YUP</p>
+              <h3>CeilingFang</h3>
+              <p>Compact lookahead peak limiter with deterministic transient control.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/CeilingFang" aria-label="Open CeilingFang repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">012</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>CombRiot</h3>
+              <p>MIDI-triggered comb-resonator instrument excited by deterministic bursts.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/CombRiot" aria-label="Open CombRiot repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">013</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>DigitalNoise</h3>
+              <p>Self-running stereo state-machine noise instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/DigitalNoise" aria-label="Open DigitalNoise repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">014</span>
+            <div class="project-copy">
+              <p class="project-type">Granular instrument // YUP</p>
+              <h3>DustGrains</h3>
+              <p>Deterministic MIDI-triggered granular fragmentation instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/DustGrains" aria-label="Open DustGrains repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">015</span>
+            <div class="project-copy">
+              <p class="project-type">Codec corruption // JUCE</p>
+              <h3>FlacoidCodecCorruptor</h3>
+              <p>Frame-based predictor and residual corruption for destructive codec-style damage.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/FlacoidCodecCorruptor" aria-label="Open FlacoidCodecCorruptor repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">016</span>
+            <div class="project-copy">
+              <p class="project-type">Wavefolding // JUCE</p>
+              <h3>FoldKnife</h3>
+              <p>Asymmetric wavefolder with substep nonlinear processing and deliberate alias modes.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/FoldKnife" aria-label="Open FoldKnife repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">017</span>
+            <div class="project-copy">
+              <p class="project-type">Wavefolding // YUP</p>
+              <h3>FoldVandal</h3>
+              <p>Asymmetric wavefolder for controlled nonlinear rupture.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/FoldVandal" aria-label="Open FoldVandal repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">018</span>
+            <div class="project-copy">
+              <p class="project-type">Glitch processing // JUCE</p>
+              <h3>GlitchNoiseJUCE</h3>
+              <p>Integer and bitwise processing with clocked holds, micro-buffer abuse, and feedback.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/GlitchNoiseJUCE" aria-label="Open GlitchNoiseJUCE repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">019</span>
+            <div class="project-copy">
+              <p class="project-type">Crusher / gate // YUP</p>
+              <h3>GutterPress</h3>
+              <p>Crusher, gate, asymmetric clamp, and tone shaping for broken signal edges.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/GutterPress" aria-label="Open GutterPress repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">020</span>
+            <div class="project-copy">
+              <p class="project-type">Noise instrument // JUCE</p>
+              <h3>HarshNoise</h3>
+              <p>Self-generating crusher, feedback, chaotic modulation, and stutter instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/HarshNoise" aria-label="Open HarshNoise repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">021</span>
+            <div class="project-copy">
+              <p class="project-type">Compression // JUCE</p>
+              <h3>IronPress</h3>
+              <p>Aggressive feed-forward compressor with detector morphing, lookahead, and bounded pump.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/IronPress" aria-label="Open IronPress repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">022</span>
+            <div class="project-copy">
+              <p class="project-type">Flanging // JUCE</p>
+              <h3>JetScab</h3>
+              <p>Through-zero-style dual-head flanger with polarity-aware feedback.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/JetScab" aria-label="Open JetScab repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">023</span>
+            <div class="project-copy">
+              <p class="project-type">Codec corruption // JUCE</p>
+              <h3>LAMEglitch</h3>
+              <p>Realtime MP3 encode/decode corruption with worker-thread codec processing.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/LAMEglitch" aria-label="Open LAMEglitch repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">024</span>
+            <div class="project-copy">
+              <p class="project-type">Bit reduction // JUCE</p>
+              <h3>MP3 Crusher</h3>
+              <p>Bit-depth and sample-rate reduction with bandwidth limiting and stutter loops.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/mp3crusher" aria-label="Open MP3 Crusher repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">025</span>
+            <div class="project-copy">
+              <p class="project-type">Codec corruption // JUCE</p>
+              <h3>MP3 Glitch</h3>
+              <p>Realtime corruption simulation with frame repeats, drops, smearing, and pre-echo.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/mp3glitch" aria-label="Open MP3 Glitch repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">026</span>
+            <div class="project-copy">
+              <p class="project-type">Comb filtering // JUCE</p>
+              <h3>NailComb</h3>
+              <p>Four-voice fractional feedback comb for tuned metallic resonance.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/NailComb" aria-label="Open NailComb repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">027</span>
+            <div class="project-copy">
+              <p class="project-type">Noise engine // JUCE</p>
+              <h3>Noise</h3>
+              <p>Deterministic self-generating and input-reactive engine for unstable spectral masses.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/Noise" aria-label="Open Noise repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">028</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>NullSpine</h3>
+              <p>MIDI-triggered exciter and tuned resonator-spine instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/NullSpine" aria-label="Open NullSpine repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">029</span>
+            <div class="project-copy">
+              <p class="project-type">Phasing // JUCE</p>
+              <h3>PhaseCoffin</h3>
+              <p>Dual-bank six-stage allpass phaser with optional barberpole motion.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/PhaseCoffin" aria-label="Open PhaseCoffin repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">030</span>
             <div class="project-copy">
               <p class="project-type">Phasing // YUP</p>
               <h3>PhaseWraith</h3>
@@ -145,18 +412,118 @@
             <a href="https://github.com/EsionHsrahLatigid/PhaseWraith" aria-label="Open PhaseWraith repository">↗</a>
           </article>
 
-          <article class="project" data-category="modulation">
-            <span class="project-index">004</span>
+          <article class="project" data-category="juce">
+            <span class="project-index">031</span>
             <div class="project-copy">
-              <p class="project-type">Flanging // YUP</p>
-              <h3>ZeroJet</h3>
-              <p>Dual-head flanger engineered for severe motion without visual noise.</p>
+              <p class="project-type">Pitch fault // JUCE</p>
+              <h3>Plitch</h3>
+              <p>Destructive MIDI-targeted pitch glitch audio effect.</p>
             </div>
-            <a href="https://github.com/EsionHsrahLatigid/ZeroJet" aria-label="Open ZeroJet repository">↗</a>
+            <a href="https://github.com/EsionHsrahLatigid/Plitch" aria-label="Open Plitch repository">↗</a>
           </article>
 
-          <article class="project" data-category="time">
-            <span class="project-index">005</span>
+          <article class="project" data-category="yup">
+            <span class="project-index">032</span>
+            <div class="project-copy">
+              <p class="project-type">Compression // YUP</p>
+              <h3>PressureHex</h3>
+              <p>Feed-forward compressor with a hard, readable signal path.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/PressureHex" aria-label="Open PressureHex repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">033</span>
+            <div class="project-copy">
+              <p class="project-type">Delay // YUP</p>
+              <h3>RazorLeak</h3>
+              <p>Time-sheared short delay with edge-driven clipped feedback.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/RazorLeak" aria-label="Open RazorLeak repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">034</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>RuinPulse</h3>
+              <p>Phase-distorted pulse instrument with deterministic rupture bursts.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/RuinPulse" aria-label="Open RuinPulse repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">035</span>
+            <div class="project-copy">
+              <p class="project-type">Delay // JUCE</p>
+              <h3>RuptureDelay</h3>
+              <p>Fractional dual-head multi-tap delay with clocked splice events and freeze.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/RuptureDelay" aria-label="Open RuptureDelay repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">036</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>ShardNoise</h3>
+              <p>MIDI-triggered binary and velvet-noise instrument with deterministic burst shaping.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ShardNoise" aria-label="Open ShardNoise repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">037</span>
+            <div class="project-copy">
+              <p class="project-type">Delay // YUP</p>
+              <h3>ShatterDelay</h3>
+              <p>Fractured feedback delay for repeatable breakage.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ShatterDelay" aria-label="Open ShatterDelay repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">038</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>ShiftFeedback</h3>
+              <p>MIDI-triggered frequency-shifted cross-feedback cloud instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ShiftFeedback" aria-label="Open ShiftFeedback repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">039</span>
+            <div class="project-copy">
+              <p class="project-type">Folding / scatter // YUP</p>
+              <h3>SlagMirror</h3>
+              <p>Sample-domain folding, cross-channel reflection, scatter, and feedback.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/SlagMirror" aria-label="Open SlagMirror repository">↗</a>
+          </article>
+
+          <article class="project" data-category="juce">
+            <span class="project-index">040</span>
+            <div class="project-copy">
+              <p class="project-type">Reverb // JUCE</p>
+              <h3>StaticCathedral</h3>
+              <p>Metallic eight-line FDN reverb with deterministic modulation and bounded freeze.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/StaticCathedral" aria-label="Open StaticCathedral repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">041</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>Subquake</h3>
+              <p>MIDI-triggered low-frequency pressure instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/Subquake" aria-label="Open Subquake repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">042</span>
             <div class="project-copy">
               <p class="project-type">Comb filtering // YUP</p>
               <h3>TeethMatrix</h3>
@@ -165,8 +532,18 @@
             <a href="https://github.com/EsionHsrahLatigid/TeethMatrix" aria-label="Open TeethMatrix repository">↗</a>
           </article>
 
-          <article class="project" data-category="time">
-            <span class="project-index">006</span>
+          <article class="project" data-category="juce">
+            <span class="project-index">043</span>
+            <div class="project-copy">
+              <p class="project-type">Glitch distortion // JUCE</p>
+              <h3>ViolentGlitch</h3>
+              <p>Bit crushing, sample hold, polarity flips, folding, and hard clipping.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ViolentGlitch" aria-label="Open ViolentGlitch repository">↗</a>
+          </article>
+
+          <article class="project" data-category="yup">
+            <span class="project-index">044</span>
             <div class="project-copy">
               <p class="project-type">Reverb // YUP</p>
               <h3>VoidFurnace</h3>
@@ -175,64 +552,14 @@
             <a href="https://github.com/EsionHsrahLatigid/VoidFurnace" aria-label="Open VoidFurnace repository">↗</a>
           </article>
 
-          <article class="project" data-category="distortion">
-            <span class="project-index">007</span>
+          <article class="project" data-category="yup">
+            <span class="project-index">045</span>
             <div class="project-copy">
-              <p class="project-type">Wavefolding // YUP</p>
-              <h3>FoldVandal</h3>
-              <p>Asymmetric wavefolder with controlled nonlinear rupture.</p>
+              <p class="project-type">Flanging // YUP</p>
+              <h3>ZeroJet</h3>
+              <p>Dual-head flanger for severe, controlled motion.</p>
             </div>
-            <a href="https://github.com/EsionHsrahLatigid/FoldVandal" aria-label="Open FoldVandal repository">↗</a>
-          </article>
-
-          <article class="project" data-category="time">
-            <span class="project-index">008</span>
-            <div class="project-copy">
-              <p class="project-type">Delay // YUP</p>
-              <h3>ShatterDelay</h3>
-              <p>Fractured feedback delay built for repeatable breakage.</p>
-            </div>
-            <a href="https://github.com/EsionHsrahLatigid/ShatterDelay" aria-label="Open ShatterDelay repository">↗</a>
-          </article>
-
-          <article class="project" data-category="dynamics">
-            <span class="project-index">009</span>
-            <div class="project-copy">
-              <p class="project-type">Limiting // YUP</p>
-              <h3>CeilingFang</h3>
-              <p>Lookahead peak limiter with a compact operational surface.</p>
-            </div>
-            <a href="https://github.com/EsionHsrahLatigid/CeilingFang" aria-label="Open CeilingFang repository">↗</a>
-          </article>
-
-          <article class="project" data-category="generator">
-            <span class="project-index">010</span>
-            <div class="project-copy">
-              <p class="project-type">Slicing // JUCE</p>
-              <h3>BBSlash</h3>
-              <p>Deterministic generative breakbeat slicer.</p>
-            </div>
-            <a href="https://github.com/EsionHsrahLatigid/BBSlash" aria-label="Open BBSlash repository">↗</a>
-          </article>
-
-          <article class="project" data-category="generator">
-            <span class="project-index">011</span>
-            <div class="project-copy">
-              <p class="project-type">Instrument // YUP</p>
-              <h3>DigitalNoise</h3>
-              <p>Self-running stereo digital-noise instrument.</p>
-            </div>
-            <a href="https://github.com/EsionHsrahLatigid/DigitalNoise" aria-label="Open DigitalNoise repository">↗</a>
-          </article>
-
-          <article class="project" data-category="distortion">
-            <span class="project-index">012</span>
-            <div class="project-copy">
-              <p class="project-type">Pitch fault // JUCE</p>
-              <h3>Plitch</h3>
-              <p>Destructive MIDI-targeted pitch glitch audio effect.</p>
-            </div>
-            <a href="https://github.com/EsionHsrahLatigid/Plitch" aria-label="Open Plitch repository">↗</a>
+            <a href="https://github.com/EsionHsrahLatigid/ZeroJet" aria-label="Open ZeroJet repository">↗</a>
           </article>
         </div>
 

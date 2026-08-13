@@ -445,6 +445,7 @@ main,
 
 .project h3 {
   margin: 0;
+  overflow-wrap: anywhere;
   font-family: var(--serif);
   font-size: clamp(28px, 3.2vw, 48px);
   font-weight: 400;

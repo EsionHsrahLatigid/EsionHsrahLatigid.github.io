@@ -8,6 +8,7 @@ import re
 import struct
 import sys
 import xml.etree.ElementTree as ET
+from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -15,6 +16,8 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 FORBIDDEN_PUBLIC_COPY = re.compile(r"digital\s+harsh\s+noise", re.IGNORECASE)
+EXPECTED_PLUGIN_COUNT = 45
+EXPECTED_PLUGIN_FRAMEWORKS = {"juce": 23, "yup": 22}
 PUBLIC_TEXT_SUFFIXES = {
     ".css",
     ".html",
@@ -34,6 +37,9 @@ class SiteParser(HTMLParser):
         self.ids: set[str] = set()
         self.local_refs: set[str] = set()
         self.meta: dict[str, str] = {}
+        self.plugin_frameworks: list[str] = []
+        self.plugin_repositories: set[str] = set()
+        self.plugin_filters: set[str] = set()
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
@@ -50,6 +56,18 @@ class SiteParser(HTMLParser):
             key = values.get("name") or values.get("property")
             if key and values.get("content"):
                 self.meta[key] = values["content"]
+
+        if tag == "article" and values.get("class") == "project":
+            if framework := values.get("data-category"):
+                self.plugin_frameworks.append(framework)
+
+        if tag == "button" and (plugin_filter := values.get("data-filter")):
+            self.plugin_filters.add(plugin_filter)
+
+        if tag == "a" and (label := values.get("aria-label", "")).startswith("Open "):
+            href = values.get("href", "")
+            if href.startswith("https://github.com/EsionHsrahLatigid/"):
+                self.plugin_repositories.add(href.removeprefix("https://github.com/EsionHsrahLatigid/"))
 
 
 def fail(message: str) -> None:
@@ -80,6 +98,20 @@ def main() -> None:
     missing_meta = required_meta - index.meta.keys()
     if missing_meta:
         fail(f"index.html is missing metadata: {', '.join(sorted(missing_meta))}")
+
+    if len(index.plugin_frameworks) != EXPECTED_PLUGIN_COUNT:
+        fail(f"plugin catalog must contain {EXPECTED_PLUGIN_COUNT} rows, got {len(index.plugin_frameworks)}")
+    if len(index.plugin_repositories) != EXPECTED_PLUGIN_COUNT:
+        fail(f"plugin catalog must link {EXPECTED_PLUGIN_COUNT} unique repositories, got {len(index.plugin_repositories)}")
+    framework_counts = Counter(index.plugin_frameworks)
+    if framework_counts != EXPECTED_PLUGIN_FRAMEWORKS:
+        fail(f"plugin framework counts are wrong: {dict(framework_counts)}")
+    if index.plugin_filters != {"all", "juce", "yup"}:
+        fail(f"plugin filters are wrong: {sorted(index.plugin_filters)}")
+    index_text = (SITE / "index.html").read_text(encoding="utf-8")
+    expected_counter = f'<span id="visible-count">{EXPECTED_PLUGIN_COUNT}</span>'
+    if expected_counter not in index_text:
+        fail(f"initial plugin counter must be {EXPECTED_PLUGIN_COUNT}")
 
     manifest = json.loads((SITE / "site.webmanifest").read_text(encoding="utf-8"))
     if manifest.get("start_url") != "/":
