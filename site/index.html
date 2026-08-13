@@ -1,98 +1,276 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <meta
-      name="description"
-      content="EsionHsrahLatigid web presence built as a compact monochrome GitHub Pages site."
-    />
-    <title>EsionHsrahLatigid / Web</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050505">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="EsionHsrahLatigid builds precise, hostile audio tools for digital harsh noise.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EsionHsrahLatigid — Digital Harsh Noise">
+    <meta property="og:description" content="Experimental audio software. Monochrome systems. Controlled damage.">
+    <meta property="og:url" content="https://esionhsrahlatigid.github.io/">
+    <meta property="og:image" content="https://esionhsrahlatigid.github.io/assets/social/ehl-social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://esionhsrahlatigid.github.io/">
+    <link rel="icon" href="assets/logos/logo-symbol-white.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <title>EsionHsrahLatigid — Digital Harsh Noise</title>
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="frame">
-      <header class="hero">
-        <p class="eyebrow">ehl-design / github pages / static site</p>
-        <div class="hero-grid">
-          <div>
-            <span class="mark" aria-label="ehl">ehl</span>
-            <h1>EsionHsrahLatigid</h1>
-            <p class="lede">
-              Compact monochrome web surface for the EHL system. Built to stay
-              readable, spare, and slightly hostile without turning into noise
-              wallpaper.
-            </p>
-          </div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-          <aside class="status" aria-label="site status">
-            <div class="status-row">
-              <span class="label">surface</span>
-              <span>static html/css</span>
-            </div>
-            <div class="status-row">
-              <span class="label">deploy</span>
-              <span>github actions</span>
-            </div>
-            <div class="status-row">
-              <span class="label">target</span>
-              <span>github pages</span>
-            </div>
-          </aside>
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="EsionHsrahLatigid home">
+        <img src="assets/logos/logo-short-white.svg" alt="" width="96" height="36">
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#signal">Signal</a>
+        <a href="#plugins">Plugins</a>
+        <a href="#systems">Systems</a>
+        <a href="https://github.com/EsionHsrahLatigid">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-index" aria-hidden="true">
+          <span>EHL//00</span>
+          <span>35.6762°N</span>
+          <span>139.6503°E</span>
         </div>
-      </header>
 
-      <main class="content">
-        <section class="panel panel-wide">
-          <div class="panel-head">
-            <h2>system notes</h2>
-            <span>monochrome / editorial / compact</span>
-          </div>
-          <div class="metrics">
-            <article>
-              <h3>identity</h3>
-              <p>Black and white only. Typography carries the brand.</p>
-            </article>
-            <article>
-              <h3>layout</h3>
-              <p>Small width, controlled height, no dead space.</p>
-            </article>
-            <article>
-              <h3>damage</h3>
-              <p>Noise lives inside the forms, not around them.</p>
-            </article>
-          </div>
-        </section>
+        <picture class="hero-logo">
+          <source media="(max-width: 42rem)" srcset="assets/logos/logo-long-stack-white.svg">
+          <img src="assets/logos/logo-long-horizontal-white.svg" alt="EsionHsrahLatigid" width="1600" height="240">
+        </picture>
+        <h1 id="hero-title" class="visually-hidden">EsionHsrahLatigid</h1>
 
-        <section class="panel">
-          <div class="panel-head">
-            <h2>delivery</h2>
-            <span>project site</span>
+        <div class="hero-copy">
+          <p class="eyebrow"><span>Digital Harsh Noise //</span> <span>Audio Processing Systems</span></p>
+          <p class="hero-statement">
+            Experimental audio software built from deterministic damage,
+            hard edges, and useful failure.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#plugins">Enter catalog</a>
+            <a class="text-action" href="https://github.com/EsionHsrahLatigid">Source repositories ↗</a>
           </div>
-          <ul class="list">
-            <li><strong>repo</strong> separate `web/` workspace</li>
-            <li><strong>entry</strong> `site/index.html`</li>
-            <li><strong>deploy</strong> upload `site/` as the Pages artifact</li>
-          </ul>
-        </section>
+        </div>
 
-        <section class="panel">
-          <div class="panel-head">
-            <h2>workflow</h2>
-            <span>push to main</span>
+        <div class="hero-symbol" aria-hidden="true">
+          <img src="assets/logos/logo-symbol-white.svg" alt="" width="256" height="256">
+        </div>
+      </section>
+
+      <section class="signal" id="signal" aria-labelledby="signal-title">
+        <div class="section-heading">
+          <p class="section-number">01</p>
+          <h2 id="signal-title">Signal definition</h2>
+        </div>
+
+        <div class="signal-grid">
+          <article>
+            <p class="signal-word">DIGITAL</p>
+            <p>Exact states. Reproducible faults. Systems that remain inspectable under stress.</p>
+          </article>
+          <article>
+            <p class="signal-word">HARSH</p>
+            <p>Unsoftened transients, nonlinear pressure, damaged time, and deliberately hostile edges.</p>
+          </article>
+          <article>
+            <p class="signal-word">NOISE</p>
+            <p>Not decoration. Noise is structure: folded into the algorithm, interface, and identity.</p>
+          </article>
+        </div>
+
+        <div class="reverse-line" aria-label="Digital Harsh Noise reversed becomes Esion Hsrah Latigid">
+          <span>DIGITAL HARSH NOISE</span>
+          <span aria-hidden="true">→ REVERSE →</span>
+          <span>ESION HSRAH LATIGID</span>
+        </div>
+      </section>
+
+      <section class="catalog" id="plugins" aria-labelledby="plugins-title">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="section-number">02</p>
+            <h2 id="plugins-title">Plugin catalog</h2>
           </div>
-          <pre class="code"><code>actions/checkout
-actions/configure-pages
-actions/upload-pages-artifact
-actions/deploy-pages</code></pre>
-        </section>
-      </main>
+          <p class="catalog-note">Selected public instruments and effects. Repository availability is the current release state.</p>
+        </div>
 
-      <footer class="footer">
-        <p>Built from the EHL brand rules as a GitHub Pages-ready starter.</p>
-      </footer>
-    </div>
+        <div class="filters" role="group" aria-label="Filter plugins by category">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">ALL</button>
+          <button class="filter" type="button" data-filter="distortion" aria-pressed="false">DISTORTION</button>
+          <button class="filter" type="button" data-filter="dynamics" aria-pressed="false">DYNAMICS</button>
+          <button class="filter" type="button" data-filter="modulation" aria-pressed="false">MODULATION</button>
+          <button class="filter" type="button" data-filter="time" aria-pressed="false">TIME/SPACE</button>
+          <button class="filter" type="button" data-filter="generator" aria-pressed="false">GENERATOR</button>
+        </div>
+
+        <p class="result-count" aria-live="polite"><span id="visible-count">12</span> signals visible</p>
+
+        <div class="project-list">
+          <article class="project" data-category="distortion">
+            <span class="project-index">001</span>
+            <div class="project-copy">
+              <p class="project-type">Bit reduction // YUP</p>
+              <h3>BitMangle</h3>
+              <p>Deterministic bitcrusher for digital harsh noise.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BitMangle" aria-label="Open BitMangle repository">↗</a>
+          </article>
+
+          <article class="project" data-category="dynamics">
+            <span class="project-index">002</span>
+            <div class="project-copy">
+              <p class="project-type">Compression // YUP</p>
+              <h3>PressureHex</h3>
+              <p>Feed-forward compressor with a hard, readable signal path.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/PressureHex" aria-label="Open PressureHex repository">↗</a>
+          </article>
+
+          <article class="project" data-category="modulation">
+            <span class="project-index">003</span>
+            <div class="project-copy">
+              <p class="project-type">Phasing // YUP</p>
+              <h3>PhaseWraith</h3>
+              <p>Barberpole phaser for continuous spectral movement.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/PhaseWraith" aria-label="Open PhaseWraith repository">↗</a>
+          </article>
+
+          <article class="project" data-category="modulation">
+            <span class="project-index">004</span>
+            <div class="project-copy">
+              <p class="project-type">Flanging // YUP</p>
+              <h3>ZeroJet</h3>
+              <p>Dual-head flanger engineered for severe motion without visual noise.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ZeroJet" aria-label="Open ZeroJet repository">↗</a>
+          </article>
+
+          <article class="project" data-category="time">
+            <span class="project-index">005</span>
+            <div class="project-copy">
+              <p class="project-type">Comb filtering // YUP</p>
+              <h3>TeethMatrix</h3>
+              <p>Fractional feedback comb for resonant metallic pressure.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/TeethMatrix" aria-label="Open TeethMatrix repository">↗</a>
+          </article>
+
+          <article class="project" data-category="time">
+            <span class="project-index">006</span>
+            <div class="project-copy">
+              <p class="project-type">Reverb // YUP</p>
+              <h3>VoidFurnace</h3>
+              <p>Hadamard feedback-delay network reverb for dense, unstable space.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/VoidFurnace" aria-label="Open VoidFurnace repository">↗</a>
+          </article>
+
+          <article class="project" data-category="distortion">
+            <span class="project-index">007</span>
+            <div class="project-copy">
+              <p class="project-type">Wavefolding // YUP</p>
+              <h3>FoldVandal</h3>
+              <p>Asymmetric wavefolder with controlled nonlinear rupture.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/FoldVandal" aria-label="Open FoldVandal repository">↗</a>
+          </article>
+
+          <article class="project" data-category="time">
+            <span class="project-index">008</span>
+            <div class="project-copy">
+              <p class="project-type">Delay // YUP</p>
+              <h3>ShatterDelay</h3>
+              <p>Fractured feedback delay built for repeatable breakage.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/ShatterDelay" aria-label="Open ShatterDelay repository">↗</a>
+          </article>
+
+          <article class="project" data-category="dynamics">
+            <span class="project-index">009</span>
+            <div class="project-copy">
+              <p class="project-type">Limiting // YUP</p>
+              <h3>CeilingFang</h3>
+              <p>Lookahead peak limiter with a compact operational surface.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/CeilingFang" aria-label="Open CeilingFang repository">↗</a>
+          </article>
+
+          <article class="project" data-category="generator">
+            <span class="project-index">010</span>
+            <div class="project-copy">
+              <p class="project-type">Slicing // JUCE</p>
+              <h3>BBSlash</h3>
+              <p>Deterministic generative breakbeat slicer.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/BBSlash" aria-label="Open BBSlash repository">↗</a>
+          </article>
+
+          <article class="project" data-category="generator">
+            <span class="project-index">011</span>
+            <div class="project-copy">
+              <p class="project-type">Instrument // YUP</p>
+              <h3>DigitalNoise</h3>
+              <p>Self-running stereo digital-noise instrument.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/DigitalNoise" aria-label="Open DigitalNoise repository">↗</a>
+          </article>
+
+          <article class="project" data-category="distortion">
+            <span class="project-index">012</span>
+            <div class="project-copy">
+              <p class="project-type">Pitch fault // JUCE</p>
+              <h3>Plitch</h3>
+              <p>Destructive MIDI-targeted pitch glitch audio effect.</p>
+            </div>
+            <a href="https://github.com/EsionHsrahLatigid/Plitch" aria-label="Open Plitch repository">↗</a>
+          </article>
+        </div>
+
+        <a class="catalog-link" href="https://github.com/orgs/EsionHsrahLatigid/repositories">View every public repository ↗</a>
+      </section>
+
+      <section class="systems" id="systems" aria-labelledby="systems-title">
+        <div class="section-heading">
+          <p class="section-number">03</p>
+          <h2 id="systems-title">Shared systems</h2>
+        </div>
+
+        <div class="system-grid">
+          <a href="https://github.com/EsionHsrahLatigid/juce-ehl-design-module">
+            <span>JUCE</span>
+            <strong>Monochrome 8-bit UI module</strong>
+            <small>Shared logo geometry, controls, states, and verification contracts.</small>
+          </a>
+          <a href="https://github.com/EsionHsrahLatigid/yup-ehl-design-module">
+            <span>YUP</span>
+            <strong>Compact plugin design module</strong>
+            <small>Operationally dense interfaces with the same EHL visual grammar.</small>
+          </a>
+          <a href="https://github.com/EsionHsrahLatigid/AgentPluginTester">
+            <span>TEST</span>
+            <strong>AgentPluginTester</strong>
+            <small>Deterministic GUI, MIDI, audio, and VST3 validation.</small>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img class="footer-logo" src="assets/logos/logo-symbol-white.svg" alt="" width="48" height="48">
+      <p>ESION HSRAH LATIGID<br>DIGITAL HARSH NOISE</p>
+      <p class="footer-meta">TOKYO // PUBLIC SOURCE // <span id="year">2026</span></p>
+    </footer>
+
+    <script src="app.js" defer></script>
   </body>
 </html>

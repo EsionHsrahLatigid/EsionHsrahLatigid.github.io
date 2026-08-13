@@ -1,0 +1,17 @@
+{
+  "name": "EsionHsrahLatigid",
+  "short_name": "EHL",
+  "description": "Experimental audio software for digital harsh noise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/assets/logos/logo-symbol-white.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

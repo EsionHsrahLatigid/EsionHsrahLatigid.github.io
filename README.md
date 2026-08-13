@@ -1,31 +1,35 @@
-# EHL Web
+# EsionHsrahLatigid Web
 
-Static GitHub Pages starter for the EsionHsrahLatigid web presence.
-
-## What is here
-
-- `site/` contains the deployable static site.
-- `.github/workflows/deploy.yml` publishes `site/` to GitHub Pages with Actions.
-
-## GitHub Pages setup
-
-1. Create a GitHub repository for this folder.
-2. Push `main`.
-3. In repository settings, set Pages source to GitHub Actions.
-4. Let the workflow deploy the `site/` artifact.
-
-## URL
-
-For a GitHub.com project site, the default URL is:
-
-`https://<owner>.github.io/<repository>`
-
-If the repository is private, Pages availability and visibility depend on the plan and organization settings.
+Official static web presence and public plugin catalog for EsionHsrahLatigid.
+The site follows the canonical `ehl-design` system: monochrome, hard-edged,
+compact, serif-led identity with controlled structural noise.
 
 ## Local preview
 
-Serve the `site/` directory with any static server, for example:
+```sh
+python3 -m http.server 4173 -d site
+```
 
-`python3 -m http.server 8000 -d site`
+Open <http://localhost:4173/>.
 
-Then open `http://localhost:8000`.
+## Verification
+
+```sh
+python3 scripts/verify_site.py
+node --check site/app.js
+xmllint --noout site/sitemap.xml site/assets/logos/*.svg site/assets/social/*.svg
+```
+
+## Deployment
+
+Pushes to `main` deploy the `site/` directory through GitHub Actions to:
+
+<https://esionhsrahlatigid.github.io/>
+
+The workflow uses the supported GitHub Pages artifact and deployment actions.
+
+## Brand assets
+
+The SVG files under `site/assets/logos/` are canonical EHL identity assets.
+Repository visibility does not grant a public logo license; reuse requires
+permission from EsionHsrahLatigid.
