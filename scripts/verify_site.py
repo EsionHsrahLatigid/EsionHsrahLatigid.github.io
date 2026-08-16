@@ -18,6 +18,10 @@ SITE = ROOT / "site"
 FORBIDDEN_PUBLIC_COPY = re.compile(r"digital\s+harsh\s+noise", re.IGNORECASE)
 EXPECTED_PLUGIN_COUNT = 45
 EXPECTED_PLUGIN_FRAMEWORKS = {"juce": 23, "yup": 22}
+REQUIRED_AI_DISCLOSURE = (
+    "AI-native workflow",
+    "Human direction and final judgment",
+)
 PUBLIC_TEXT_SUFFIXES = {
     ".css",
     ".html",
@@ -109,6 +113,9 @@ def main() -> None:
     if index.plugin_filters != {"all", "juce", "yup"}:
         fail(f"plugin filters are wrong: {sorted(index.plugin_filters)}")
     index_text = (SITE / "index.html").read_text(encoding="utf-8")
+    for phrase in REQUIRED_AI_DISCLOSURE:
+        if phrase not in index_text:
+            fail(f"index.html is missing required AI disclosure: {phrase}")
     expected_counter = f'<span id="visible-count">{EXPECTED_PLUGIN_COUNT}</span>'
     if expected_counter not in index_text:
         fail(f"initial plugin counter must be {EXPECTED_PLUGIN_COUNT}")

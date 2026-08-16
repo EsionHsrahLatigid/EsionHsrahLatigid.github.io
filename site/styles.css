@@ -362,6 +362,34 @@ main,
   color: var(--low);
 }
 
+.ai-process {
+  display: grid;
+  min-height: 128px;
+  padding: 28px 20px;
+  grid-template-columns: minmax(180px, 3fr) minmax(0, 9fr);
+  align-items: start;
+  gap: 24px;
+  border: 1px solid var(--line);
+  border-top: 0;
+}
+
+.ai-process p {
+  margin: 0;
+}
+
+.ai-process-label {
+  color: var(--paper);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.ai-process > p:last-child {
+  max-width: 72ch;
+  color: var(--mid);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .reverse-line {
   display: grid;
   min-height: 72px;
@@ -634,6 +662,10 @@ main,
 
   .signal-grid,
   .system-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-process {
     grid-template-columns: 1fr;
   }
 
