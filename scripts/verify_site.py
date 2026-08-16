@@ -16,8 +16,16 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 FORBIDDEN_PUBLIC_COPY = re.compile(r"digital\s+harsh\s+noise", re.IGNORECASE)
-EXPECTED_PLUGIN_COUNT = 45
-EXPECTED_PLUGIN_FRAMEWORKS = {"juce": 23, "yup": 22}
+EXPECTED_PLUGIN_COUNT = 51
+EXPECTED_PLUGIN_FRAMEWORKS = {"juce": 29, "yup": 22}
+EXPECTED_JUCE_RELEASES = {
+    "BinGrave": "v0.1.2",
+    "DeltaSpine": "v0.1.1",
+    "FormantWound": "v0.1.0",
+    "GrainLatch": "v0.1.0",
+    "PacketRot": "v0.1.1",
+    "SidebandMaw": "v0.1.1",
+}
 REQUIRED_AI_DISCLOSURE = (
     "AI-native workflow",
     "Human direction and final judgment",
@@ -113,6 +121,22 @@ def main() -> None:
     if index.plugin_filters != {"all", "juce", "yup"}:
         fail(f"plugin filters are wrong: {sorted(index.plugin_filters)}")
     index_text = (SITE / "index.html").read_text(encoding="utf-8")
+    project_indices = re.findall(r'<span class="project-index">(\d{3})</span>', index_text)
+    expected_indices = [f"{number:03d}" for number in range(1, EXPECTED_PLUGIN_COUNT + 1)]
+    if project_indices != expected_indices:
+        fail("plugin indices are not sequential from 001 to "
+             f"{EXPECTED_PLUGIN_COUNT:03d}")
+    for repo, version in EXPECTED_JUCE_RELEASES.items():
+        release_url = f"https://github.com/EsionHsrahLatigid/{repo}/releases/tag/{version}"
+        article_pattern = (
+            rf'<article class="project" data-category="juce" '
+            rf'data-version="{re.escape(version)}" '
+            rf'data-release-url="{re.escape(release_url)}">'
+            rf'.*?<h3>{re.escape(repo)}</h3>.*?'
+            rf'<a href="https://github.com/EsionHsrahLatigid/{re.escape(repo)}" '
+        )
+        if not re.search(article_pattern, index_text, re.DOTALL):
+            fail(f"missing verified JUCE catalog entry for {repo} {version}")
     for phrase in REQUIRED_AI_DISCLOSURE:
         if phrase not in index_text:
             fail(f"index.html is missing required AI disclosure: {phrase}")
