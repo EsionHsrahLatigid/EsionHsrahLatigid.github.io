@@ -53,17 +53,24 @@ EXPECTED_PLUGIN_FRAMEWORKS = {"juce": 33, "yup": 22}
 EXPECTED_JUCE_RELEASES = {
     "BandRiot": ("003", "v0.1.1"),
     "BinGrave": ("007", "v0.1.2"),
-    "BitRash": ("009", "v0.1.1"),
-    "BrickMaw": ("011", "v0.1.1"),
+    "BitRash": ("009", "v0.1.2"),
+    "BrickMaw": ("011", "v0.1.2"),
     "DeltaSpine": ("016", "v0.1.1"),
-    "FoldKnife": ("019", "v0.1.1"),
+    "FoldKnife": ("019", "v0.1.2"),
     "FormantWound": ("021", "v0.1.1"),
     "GrainLatch": ("023", "v0.1.1"),
+    "HarshNoise": ("025", "v1.0.1"),
+    "IronPress": ("026", "v0.1.1"),
     "IRRot": ("027", "v0.1.1"),
+    "JetScab": ("028", "v0.1.1"),
+    "NailComb": ("032", "v0.1.1"),
     "PacketRot": ("035", "v0.1.1"),
+    "PhaseCoffin": ("036", "v0.1.2"),
     "PhaseShred": ("037", "v0.1.1"),
+    "RuptureDelay": ("043", "v0.1.2"),
     "ScaleWound": ("045", "v0.1.1"),
     "SidebandMaw": ("046", "v0.1.1"),
+    "StaticCathedral": ("050", "v0.1.2"),
 }
 REQUIRED_AI_DISCLOSURE = (
     "AI-native workflow",
@@ -203,12 +210,13 @@ def main() -> None:
              f"{EXPECTED_PLUGIN_COUNT:03d}")
     for repo, (index_number, version) in EXPECTED_JUCE_RELEASES.items():
         release_url = f"https://github.com/EsionHsrahLatigid/{repo}/releases/tag/{version}"
+        within_article = r"(?:(?!</article>).)*?"
         article_pattern = (
             rf'<article class="project" data-category="juce" '
             rf'data-version="{re.escape(version)}" '
             rf'data-release-url="{re.escape(release_url)}">'
             rf'\s*<span class="project-index">{re.escape(index_number)}</span>'
-            rf'.*?<h3>{re.escape(repo)}</h3>.*?'
+            rf'{within_article}<h3>{re.escape(repo)}</h3>{within_article}'
             rf'<a href="https://github.com/EsionHsrahLatigid/{re.escape(repo)}" '
         )
         if not re.search(article_pattern, index_text, re.DOTALL):
